@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт Богдана Василюка</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+					function checkAnswer(id,trueAnswer)
+					{
+						var userAnswer = document.getElementById(id).value;
+						if(userAnswer==trueAnswer)
+							return true;
+						else
+							return false;
+					}
+					function checkAnswers()
+					{
+						var goodAnswers = 0;
+						if (checkAnswer('puzzle1','убил')) 
+							goodAnswers++;
+						if (checkAnswer('puzzle2','и')) 
+							goodAnswers++;
+						if (checkAnswer('puzzle3','программист')) 
+							goodAnswers++;
+						if (goodAnswers == 0)
+							alert ("Вы неудачник!");
+						else
+							alert ("Колличество правильных ответов " + goodAnswers);
+					}
+				</script>
+</head>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="page.html">Загадки</a><span>/</span>
+		<a href="page1.html">Угадайка</a><span>/</span>
+		<a href="page2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	
+  		    <div id="box_text">
+			<h3>Попробуй угадать!</h3>
+			<p>У попа была собака он ее любил, она съела кусок мяса, что он с ней сделал? </p>
+			<p><input type="text" id='puzzle1'/></p>
+			<p>А и Б сидели на трубе, А упала Б пропала, кто остался на трубе</p>
+			<p><input type="text" id='puzzle2'/></p>
+			<p>Он всемогущ, он телепат, всегда угрюм и бородат, он может чайник починить, отправить почту в интернет, взломать аккаунт, word открыть, за пиво флешку починить, ну и кто же это?</p>
+			<p><input type="text" id='puzzle3'/></p>
+			<p><input type="button" value="Ответить" onclick="checkAnswers()" /></p>
+			<p>На этом сайте вы сможете сыграть в три игры, которые я написал:</p>        
+			<ul id="navigation">
+			<a href="page.html">Загадки</a>	
+			<a href="page1.html">Угадайка</a>
+			<a href="page2.html">Угадайка мультиплеер</a>	
+			</ur>	 
+	<br>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
